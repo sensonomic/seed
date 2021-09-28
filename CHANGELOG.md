@@ -26,6 +26,7 @@
 - Added `sl_input` to the `custom_elements` example.
 - [BREAKING] Changed `Request.body` to take its argument by reference.
 - Adapted to Rust 1.53.0.
+- [BREAKING] Added blanket `impl<Ms, T: IntoNodes<Ms>> IntoNode<Ms> for Option<T>`. This might conflict with local `impl`s of `IntoNodes`, but should make those unnecessary and safe to remove.
 
 ## v0.8.0
 
